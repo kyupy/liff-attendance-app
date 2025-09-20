@@ -10,7 +10,7 @@ async function main() {
 
     // 1. LIFFを初期化
     // 【重要】'YOUR_LIFF_ID' は後で自分のLIFF IDに書き換える
-    await liff.init({ liffId: 'YOUR_LIFF_ID' }).catch(err => {
+    await liff.init({ liffId: '2008098616-O1xoM4nr' }).catch(err => {
         console.error(err);
         statusElement.textContent = "LIFFの初期化に失敗しました。";
         return;
@@ -34,7 +34,7 @@ async function main() {
 
     // 4. バックエンド（GAS）にデータを送信
     statusElement.textContent = "サーバーに情報を送信中...";
-    const gasWebAppUrl = 'YOUR_GAS_WEB_APP_URL'; // 【重要】ステップ1でコピーしたGASのURLに書き換える
+    const gasWebAppUrl = 'https://script.google.com/macros/s/AKfycbzrTXjM_Q0kQ7SMEwG0XQ9saEt0VnUctcGWgPwELOZ_j1l-F7wr-gqIgi90ZWr1l8gP8A/exec'; // 【重要】ステップ1でコピーしたGASのURLに書き換える
 
     const postData = {
         userId: profile.userId,
